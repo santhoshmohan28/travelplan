@@ -1,0 +1,2 @@
+class VisitorReview < ApplicationRecord
+end
