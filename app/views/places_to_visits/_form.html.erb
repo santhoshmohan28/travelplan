@@ -1,0 +1,17 @@
+<%= form_with(model: places_to_visit, local: true) do |form| %>
+  <% if places_to_visit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(places_to_visit.errors.count, "error") %> prohibited this places_to_visit from being saved:</h2>
+
+      <ul>
+      <% places_to_visit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
