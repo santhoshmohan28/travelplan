@@ -1,0 +1,17 @@
+<%= form_with(model: visitor_review, local: true) do |form| %>
+  <% if visitor_review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(visitor_review.errors.count, "error") %> prohibited this visitor_review from being saved:</h2>
+
+      <ul>
+      <% visitor_review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
